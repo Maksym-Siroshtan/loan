@@ -1,5 +1,6 @@
 import MainSlider from "./modules/slider/slider-main";
 import MiniSlider from "./modules/slider/slider-mini";
+import VideoPlayer from './modules/videoPlayer';
 
 window.addEventListener("DOMContentLoaded", () => {
   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
@@ -31,4 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
     activeClass: 'feed__item-active'
   });
   feedSlider.init();
+
+  const videoPlayer = new VideoPlayer('.showup__video .play', '.overlay');
+  videoPlayer.init();
 });
