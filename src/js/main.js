@@ -5,6 +5,14 @@ window.addEventListener("DOMContentLoaded", () => {
   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
   mainSlider.render();
 
+  const modulesPageSlider = new MainSlider({
+    container: ".moduleapp",
+    btns: ".next",
+    prev: ".prevmodule",
+    next: ".nextmodule",
+  });
+  modulesPageSlider.render();
+
   const showSlider = new MiniSlider({
     container: ".showup__content-slider",
     prev: ".showup__prev",
