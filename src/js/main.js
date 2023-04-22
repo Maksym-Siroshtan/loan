@@ -1,9 +1,10 @@
 import MainSlider from "./modules/slider/slider-main";
 import MiniSlider from "./modules/slider/slider-mini";
-import VideoPlayer from './modules/videoPlayer';
-import Difference from './modules/difference';
-import Form from './modules/form';
+import VideoPlayer from "./modules/videoPlayer";
+import Difference from "./modules/difference";
+import Form from "./modules/form";
 import ShowInfo from "./modules/showInfo";
+import Download from "./modules/download";
 
 window.addEventListener("DOMContentLoaded", () => {
   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
@@ -21,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     container: ".showup__content-slider",
     prev: ".showup__prev",
     next: ".showup__next",
-    activeClass: 'card-active',
+    activeClass: "card-active",
     animate: true
   });
   showSlider.init();
@@ -30,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
     container: ".modules__content-slider",
     prev: ".modules__info-btns .slick-prev",
     next: ".modules__info-btns .slick-next",
-    activeClass: 'card-active',
+    activeClass: "card-active",
     animate: true,
     autoplay: true
   });
@@ -52,4 +53,5 @@ window.addEventListener("DOMContentLoaded", () => {
   new VideoPlayer('.module__video-item .play', '.overlay').init();
 
   new ShowInfo('.plus__content').init();
+  new Download('.download').init();
 });
