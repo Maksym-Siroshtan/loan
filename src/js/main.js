@@ -42,20 +42,11 @@ window.addEventListener("DOMContentLoaded", () => {
     activeClass: 'feed__item-active'
   });
   feedSlider.init();
-<<<<<<< HEAD
-=======
-
-  new VideoPlayer('.showup__video .play', '.overlay').init();
-  new VideoPlayer('.module__video-item .play', '.overlay').init();
->>>>>>> ba375125b630878e1ab0b49e2d92c736d6db3904
 
   new Difference('.officerold', '.officernew', '.officer__card-item').init();
 
   new Form('.form').init();
-<<<<<<< HEAD
 
   new VideoPlayer('.showup__video .play', '.overlay').init();
   new VideoPlayer('.module__video-item .play', '.overlay').init();
-=======
->>>>>>> ba375125b630878e1ab0b49e2d92c736d6db3904
 });
