@@ -3,7 +3,7 @@ import MiniSlider from "./modules/slider/slider-mini";
 import VideoPlayer from './modules/videoPlayer';
 
 window.addEventListener("DOMContentLoaded", () => {
-  const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
+/*   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
   mainSlider.render();
 
   const showSlider = new MiniSlider({
@@ -31,8 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
     next: ".feed__slider .slick-next",
     activeClass: 'feed__item-active'
   });
-  feedSlider.init();
+  feedSlider.init(); */
 
-  const videoPlayer = new VideoPlayer('.showup__video .play', '.overlay');
-  videoPlayer.init();
+  new VideoPlayer('.showup__video .play', '.overlay').init();
+  new VideoPlayer('.module__video-item .play', '.overlay').init();
 });
