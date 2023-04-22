@@ -35,16 +35,20 @@ export default class MiniSlider extends Slider {
   }
 
   bindTriggers() {
-    this.next.addEventListener("click", () => this.nextSlide());
+    this.next.forEach(item => {
+      item.addEventListener("click", () => this.nextSlide());
+    });
 
-    this.prev.addEventListener("click", () => {
-      for (let i = this.slides.length - 1; i > 0; i--) {
-        if (this.slides[i].tagName !== "BUTTON") {
-          this.container.insertBefore(this.slides[i], this.slides[0]);
-          this.decorizeSlides();
-          break;
+    this.prev.forEach(item => {
+      item.addEventListener("click", () => {
+        for (let i = this.slides.length - 1; i > 0; i--) {
+          if (this.slides[i].tagName !== "BUTTON") {
+            this.container.insertBefore(this.slides[i], this.slides[0]);
+            this.decorizeSlides();
+            break;
+          }
         }
-      }
+      });
     });
   }
 
@@ -76,23 +80,25 @@ export default class MiniSlider extends Slider {
   }
 
   init() {
-    this.container.style.cssText = `
+    try {
+      this.container.style.cssText = `
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
       overflow: hidden;
-    `;
+      `;
 
-    this.isButtonsFilteredArray = Array.from(this.slides).filter(
-      (slideElement) => slideElement.tagName === "BUTTON"
-    );
+      this.isButtonsFilteredArray = Array.from(this.slides).filter(
+        (slideElement) => slideElement.tagName === "BUTTON"
+      );
 
-    this.bindTriggers();
-    this.decorizeSlides();
+      this.bindTriggers();
+      this.decorizeSlides();
 
-    if (this.autoplay) {
-      this.activateAnimation();
-      this.bindEvents();
-    }
+      if (this.autoplay) {
+        this.activateAnimation();
+        this.bindEvents();
+      }
+    } catch (error) {}
   }
 }

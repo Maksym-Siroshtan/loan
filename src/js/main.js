@@ -1,10 +1,20 @@
 import MainSlider from "./modules/slider/slider-main";
 import MiniSlider from "./modules/slider/slider-mini";
 import VideoPlayer from './modules/videoPlayer';
+import Difference from './modules/difference';
+import Form from './modules/form';
 
 window.addEventListener("DOMContentLoaded", () => {
-/*   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
+  const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
   mainSlider.render();
+
+  const modulesPageSlider = new MainSlider({
+    container: ".moduleapp",
+    btns: ".next",
+    prev: ".prevmodule",
+    next: ".nextmodule",
+  });
+  modulesPageSlider.render();
 
   const showSlider = new MiniSlider({
     container: ".showup__content-slider",
@@ -31,8 +41,12 @@ window.addEventListener("DOMContentLoaded", () => {
     next: ".feed__slider .slick-next",
     activeClass: 'feed__item-active'
   });
-  feedSlider.init(); */
+  feedSlider.init();
 
   new VideoPlayer('.showup__video .play', '.overlay').init();
   new VideoPlayer('.module__video-item .play', '.overlay').init();
+
+  new Difference('.officerold', '.officernew', '.officer__card-item').init();
+
+  new Form('.form').init();
 });
