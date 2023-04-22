@@ -5185,42 +5185,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener("DOMContentLoaded", function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
-    mainSlider.render();
-  
-    const showSlider = new MiniSlider({
-      container: ".showup__content-slider",
-      prev: ".showup__prev",
-      next: ".showup__next",
-      activeClass: 'card-active',
-      animate: true
-    });
-    showSlider.init();
-  
-    const modulesSlider = new MiniSlider({
-      container: ".modules__content-slider",
-      prev: ".modules__info-btns .slick-prev",
-      next: ".modules__info-btns .slick-next",
-      activeClass: 'card-active',
-      animate: true,
-      autoplay: true
-    });
-    modulesSlider.init();
-  
-    const feedSlider = new MiniSlider({
-      container: ".feed__slider",
-      prev: ".feed__slider .slick-prev",
-      next: ".feed__slider .slick-next",
-      activeClass: 'feed__item-active'
-    });
-    feedSlider.init(); 
-  new _modules_videoPlayer__WEBPACK_IMPORTED_MODULE_2__["default"]('.showup__video .play', '.overlay').init();
-  new _modules_videoPlayer__WEBPACK_IMPORTED_MODULE_2__["default"]('.module__video-item .play', '.overlay').init();
->>>>>>> ba375125b630878e1ab0b49e2d92c736d6db3904
   var mainSlider = new _modules_slider_slider_main__WEBPACK_IMPORTED_MODULE_0__["default"]({
     container: ".page",
     btns: ".next"
@@ -5259,40 +5223,8 @@ window.addEventListener("DOMContentLoaded", function () {
   feedSlider.init();
   new _modules_difference__WEBPACK_IMPORTED_MODULE_3__["default"]('.officerold', '.officernew', '.officer__card-item').init();
   new _modules_form__WEBPACK_IMPORTED_MODULE_4__["default"]('.form').init();
-<<<<<<< HEAD
-=======
-  /*   const mainSlider = new MainSlider({ container: ".page", btns: ".next" });
-    mainSlider.render();
-  
-    const showSlider = new MiniSlider({
-      container: ".showup__content-slider",
-      prev: ".showup__prev",
-      next: ".showup__next",
-      activeClass: 'card-active',
-      animate: true
-    });
-    showSlider.init();
-  
-    const modulesSlider = new MiniSlider({
-      container: ".modules__content-slider",
-      prev: ".modules__info-btns .slick-prev",
-      next: ".modules__info-btns .slick-next",
-      activeClass: 'card-active',
-      animate: true,
-      autoplay: true
-    });
-    modulesSlider.init();
-  
-    const feedSlider = new MiniSlider({
-      container: ".feed__slider",
-      prev: ".feed__slider .slick-prev",
-      next: ".feed__slider .slick-next",
-      activeClass: 'feed__item-active'
-    });
-    feedSlider.init(); */
   new _modules_videoPlayer__WEBPACK_IMPORTED_MODULE_2__["default"]('.showup__video .play', '.overlay').init();
   new _modules_videoPlayer__WEBPACK_IMPORTED_MODULE_2__["default"]('.module__video-item .play', '.overlay').init();
->>>>>>> feature/video-player
 });
 
 /***/ }),
